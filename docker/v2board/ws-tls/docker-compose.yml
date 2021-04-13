@@ -6,10 +6,10 @@ services:
     container_name: v2ray-ws-tls
     restart: always
     ports:
-      - "443:443"
+      - "9000:9000"
       #- "80:80"
     volumes:
-      - ./config.json:/etc/v2ray/config.json
+      - /root/v2ray-poseidon/docker/v2board/ws-tls/config.json:/etc/v2ray/config.json
       #- ./v2ray.crt:/etc/v2ray/v2ray.crt
       #- ./v2ray.key:/etc/v2ray/v2ray.key
     environment:
@@ -23,10 +23,10 @@ services:
       # dns_cf 或 dns_namesilo 或 dns_namecheap
       - DNS_PROVIDER=dns_cf
       # 申请 DNS 证书的域名
-      - CERT_DOMAIN=demo.oppapanel.xyz
+      - CERT_DOMAIN=.wouw.cc
       # 使用 cloudflare DNS 验证
-      - CF_Email=
-      - CF_Key=
+      - CF_Email=lusalem@gmail.com
+      - CF_Key=7f5c92f79fd08a52f6bb6547e55c02145f347
       # 使用 namesilo DNS 验证
       - Namesilo_Key=
       # 使用 namecheap DNS 验证
