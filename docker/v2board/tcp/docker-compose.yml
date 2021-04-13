@@ -6,7 +6,7 @@ services:
     container_name: v2ray-tcp
     restart: always
     ports:
-      - "服务端口:服务端口"
+      - "8000:8000"
     volumes:
       - ./config.json:/etc/v2ray/config.json
     logging:
