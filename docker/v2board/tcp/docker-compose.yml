@@ -8,7 +8,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./config.json:/etc/v2ray/config.json
+      - /root/v2ray-poseidon/docker/v2board/ws-tls/config.json:/etc/v2ray/config.json
     logging:
       driver: "json-file"
       options:
